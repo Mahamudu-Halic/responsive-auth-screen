@@ -1,0 +1,11 @@
+.landing-page{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.landing-page__buttons{
+    display: flex;
+    gap: 1rem;
+}
