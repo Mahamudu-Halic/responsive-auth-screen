@@ -47,8 +47,11 @@ const RegisterPage = (props: Props) => {
               </Span>
             </H1>
             <FormGroup>
-              <Label color="#898989">Username</Label>
+              <Label htmlFor="name" color="#898989">
+                Username
+              </Label>
               <Input
+                id="name"
                 width="100%"
                 type="text"
                 name="name"
@@ -57,8 +60,11 @@ const RegisterPage = (props: Props) => {
               />
             </FormGroup>
             <FormGroup>
-              <Label color="#898989">Email</Label>
+              <Label htmlFor="email" color="#898989">
+                Email
+              </Label>
               <Input
+                id="email"
                 width="100%"
                 type="email"
                 name="email"
@@ -67,8 +73,11 @@ const RegisterPage = (props: Props) => {
               />
             </FormGroup>
             <FormGroup>
-              <Label color="#898989">Password</Label>
+              <Label htmlFor="password" color="#898989">
+                Password
+              </Label>
               <Input
+                id="password"
                 width="100%"
                 type="password"
                 name="name"

@@ -41,11 +41,17 @@ const SignInPage = (props: Props) => {
         <AuthFormContainer>
           <AuthForm width="" border="none">
             <H1 color="#000" align="center" transform="uppercase">
-              Mastery<Span size={3} color="#69A47A">Hub</Span>
+              Mastery
+              <Span size={3} color="#69A47A">
+                Hub
+              </Span>
             </H1>
             <FormGroup>
-              <Label color="#898989">Username or Email</Label>
+              <Label htmlFor="name" color="#898989">
+                Username or Email
+              </Label>
               <Input
+                id="name"
                 width="100%"
                 type="text"
                 name="name"
@@ -54,8 +60,11 @@ const SignInPage = (props: Props) => {
               />
             </FormGroup>
             <FormGroup>
-              <Label color="#898989">Password</Label>
+              <Label htmlFor="password" color="#898989">
+                Password
+              </Label>
               <Input
+                id="password"
                 width="100%"
                 type="password"
                 name="name"
