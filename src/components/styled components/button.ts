@@ -7,23 +7,29 @@ type Variant =
   | "premium"
   | "destructive"
   | "disabled"
+  | "outlined"
   | "standard";
 
-export const Button = styled.button<{ variant?: Variant }>`
+export const Button = styled.button<{
+  variant?: Variant;
+  position?: string;
+  color?: string;
+}>`
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 0.7rem;
   font-size: 1.2rem;
+  gap: 10px;
   background: none;
   border: none;
   border-radius: 8px;
   cursor: pointer;
-  color: #fff;
-  filter: brightness(0.8);
-
-  &:hover {
-    filter: brightness(1);
+  color: ${({ color }) => color || "inherit"};
+  filter: brightness(1);
+  position: ${({ position }) => position || "relative"};
+  &:active {
+    filter: brightness(0.8);
   }
 
   ${({ variant }) => {
@@ -31,6 +37,10 @@ export const Button = styled.button<{ variant?: Variant }>`
       case "primary":
         return `
               background: #0c73f5;
+            `;
+      case "outlined":
+        return `
+              border: none;
             `;
       case "secondary":
         return `
@@ -50,7 +60,7 @@ export const Button = styled.button<{ variant?: Variant }>`
             `;
       case "disabled":
         return `
-              background: #373941;
+              background: #263238;
             `;
       case "standard":
         return `
@@ -60,7 +70,6 @@ export const Button = styled.button<{ variant?: Variant }>`
         return `
               background: none;
               border: solid 1px #000;
-              color: #000;
             `;
     }
   }}
