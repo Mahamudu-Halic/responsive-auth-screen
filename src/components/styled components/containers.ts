@@ -15,7 +15,6 @@ export const AuthPageContainer = styled.div`
   @media (max-width: 450px) {
     padding: 10px;
   }
-
 `;
 
 export const AuthContainer = styled.div`
@@ -71,6 +70,14 @@ export const AuthDescriptionContainer = styled.div`
 `;
 
 export const OptionContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  gap: 10px;
+`;
+
+export const SlideNavigatorContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;

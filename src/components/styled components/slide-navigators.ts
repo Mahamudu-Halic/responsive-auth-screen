@@ -13,3 +13,4 @@ export const SlideNavigator = styled.button<{
   width: ${({ width }) => width || 18}px;
   height: ${({ height }) => height || 18}px;
 `;
+
