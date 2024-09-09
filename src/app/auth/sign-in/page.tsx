@@ -1,15 +1,29 @@
 "use client";
 
+import AuthSliderComponent from "@/components/auth/auth-slider";
+import { Button } from "@/components/styled components/button";
 import {
   AuthContainer,
   AuthDescriptionContainer,
   AuthFormContainer,
-  AuthImageContainer,
+  ImageContainer,
   AuthPageContainer,
   AuthSliderContainer,
+  OptionContainer,
 } from "@/components/styled components/containers";
-import { Text } from "@/components/styled components/content";
-import { H2 } from "@/components/styled components/headings";
+import {
+  Divider,
+  Span,
+  Text,
+  UrlLink,
+} from "@/components/styled components/content";
+import {
+  AuthForm,
+  FormGroup,
+  Input,
+  Label,
+} from "@/components/styled components/form";
+import { H1, H2 } from "@/components/styled components/headings";
 import { ImageComponent } from "@/components/styled components/image";
 import Image from "next/image";
 import React from "react";
@@ -18,26 +32,74 @@ type Props = {};
 
 const SignInPage = (props: Props) => {
   return (
-    <AuthPageContainer>
-      <AuthContainer>
+    <AuthPageContainer className="auth-page-container">
+      <AuthContainer className="auth-container">
         {/* auth slider */}
-        <AuthSliderContainer>
-          <AuthImageContainer>
-            <ImageComponent src="/assets/social-girl.png" alt="social girl" />
-          </AuthImageContainer>
-
-          <AuthDescriptionContainer>
-            <H2 color="#263238">Exam Mastery Hub</H2>
-            <Text align="center" color="#181c19">
-              Unleash Your Accademic Success with Exam Mastery Hub’s Exam
-              Excellence Platform
-            </Text>
-          </AuthDescriptionContainer>
-        </AuthSliderContainer>
+        <AuthSliderComponent />
 
         {/* auth form */}
         <AuthFormContainer>
-          <h1>form here</h1>
+          <AuthForm width="" border="none">
+            <H1 color="#000" align="center" transform="uppercase">
+              Mastery<Span size={3} color="#69A47A">Hub</Span>
+            </H1>
+            <FormGroup>
+              <Label color="#898989">Username or Email</Label>
+              <Input
+                width="100%"
+                type="text"
+                name="name"
+                required
+                placeholder="halic"
+              />
+            </FormGroup>
+            <FormGroup>
+              <Label color="#898989">Password</Label>
+              <Input
+                width="100%"
+                type="password"
+                name="name"
+                required
+                placeholder="password"
+              />
+            </FormGroup>
+            <UrlLink
+              color="#69A47A"
+              decoration="underline"
+              href={"#"}
+              align="right"
+            >
+              Forgot password?
+            </UrlLink>
+
+            <Button variant="disabled" color="#fff" type="submit">
+              Sign in
+            </Button>
+
+            <OptionContainer>
+              <Divider />
+              <Text color="#898989">or</Text>
+              <Divider />
+            </OptionContainer>
+
+            <Button color="#898989" variant="outlined" type="button">
+              <ImageContainer width="30px" height="30px">
+                <ImageComponent src="/assets/google.svg" alt="social girl" />
+              </ImageContainer>
+              Sign in with Google
+            </Button>
+
+            <Text align="center" color="#898989">
+              Are you new?{" "}
+              <UrlLink
+                color="#69A47A"
+                decoration="underline"
+                href={"/auth/register"}
+              >
+                Register
+              </UrlLink>
+            </Text>
+          </AuthForm>
         </AuthFormContainer>
       </AuthContainer>
     </AuthPageContainer>
