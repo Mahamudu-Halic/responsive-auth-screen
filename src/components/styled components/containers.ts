@@ -33,6 +33,8 @@ display: flex;
 height: 100%;
 width: 100%;
 background: #fff;
+justify-content: center;
+align-items: center;
 flex: 1;
 `;
 
