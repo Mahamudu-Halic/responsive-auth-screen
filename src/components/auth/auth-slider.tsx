@@ -7,6 +7,7 @@ import {
 import { ImageComponent } from "../styled components/image";
 import { H2 } from "../styled components/headings";
 import { Text } from "../styled components/content";
+import Navigators from "./navigators";
 
 type Props = {};
 
@@ -24,6 +25,8 @@ const AuthSliderComponent = (props: Props) => {
           Platform
         </Text>
       </AuthDescriptionContainer>
+
+      <Navigators />
     </AuthSliderContainer>
   );
 };
